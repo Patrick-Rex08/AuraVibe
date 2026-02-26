@@ -1,0 +1,266 @@
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fullscreen Background */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("Images/BackGround.jpg"); 
+  background-size: cover;        /* Makes it fill screen */
+  background-position: center;   /* Keeps center aligned */
+  background-repeat: no-repeat;
+
+  z-index: -1; 
+}
+body.dark .background {
+  background-image: url("Images/Dark.jpg");
+}
+.toggle {
+  width: 35px;          
+  height: 15px;         
+  background: #b7b5b5;
+  border-radius: 50px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition: background 0.4s ease;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.toggle .circle {
+  width: 15px;          
+  height: 15px;         
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  transition: transform 0.4s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+body.dark .circle {
+  transform: translateX(20px);   /* adjust according to width */
+}
+.circle span {
+  font-size: 14px;   /* adjust if needed */
+  line-height: 1;    /* removes extra vertical spacing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+}
+.login-card {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+
+  width: 380px;
+  height: 500px;
+  padding-top:2px ;
+  padding-bottom: 20px;
+  border-radius: 20px;
+
+  background: rgba(187, 0, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+  text-align: center;
+  color: linear-gradient(45deg, #7b2ff7, #f107a3);
+  transition: 0.4s ease;
+}
+.gradient-text {
+  background: linear-gradient(45deg, #7b2ff7, #f107a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.login-card input {
+  width: 70%;
+  height: 5px;
+  padding: 12px;
+  
+  margin: 8px 8px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+  
+
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(0, 0, 0);
+
+  font-size: 14px;
+}
+.login-card button {
+  margin-top: 15px;   /* moves button down */
+  padding: 8px 20px;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  
+}
+
+.login{
+    background: linear-gradient(45deg, #7b2ff7, #f107a3)
+}
+
+.login-card input::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+body.dark .login-card {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+
+  width: 380px;
+  height: 500px;
+  padding-top:2px ;
+  padding-bottom: 20px;
+  border-radius: 20px;
+
+  background: rgba(3, 243, 239, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(247, 238, 238, 0.3);
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+  text-align: center;
+  color: rgb(255, 255, 255);
+  transition: 0.4s ease;
+}
+body.dark .login-card input {
+  width: 70%;
+  height: 5px;
+  padding: 12px;
+  
+  margin: 8px 8px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(249, 248, 248, 0.3);
+  outline: none;
+  
+
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+
+  font-size: 14px;
+}
+body.dark .login-card input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+body.dark .login-card button {
+  margin-top: 15px;   /* moves button down */
+  padding: 8px 20px;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+.Signup {
+  font-size: 14px;
+  margin-top: 35px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.Signup a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #2419c8;
+}
+
+.Signup a:hover {
+  text-decoration: underline;
+}
+body.dark .Signup {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body.dark .Signup a {
+  color: #00f3ef;
+}
+.social-login {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.google-btn,
+.facebook-btn {
+  width: 75%;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  
+}
+
+/* Google Button */
+.google-btn {
+  background: #ffff;
+  color: black !important;
+}
+
+/* Facebook Button */
+.facebook-btn {
+  background: #1877f2;
+  color: white;
+}
+
+.google-btn:hover,
+.facebook-btn:hover {
+  transform: scale(1.05);
+}
+body.dark .google-btn {
+  background: white;
+  color: black;
+}
+
+body.dark .facebook-btn {
+  background: #1877f2;
+  color: white;
+}
+.icon1 {
+  width: 16px;
+  height: 16px;
+  padding-right: 25px;
+}
+.icon2 {
+  width: 10px;
+  height: 18px;
+  padding-right: 20px;
+}
+
+.bottom-logo {
+  width: 100px;
+  padding-top: 100px;
+  margin-top: auto;
+  margin-bottom: 15px;
+  align-self: center;
+}
