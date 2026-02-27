@@ -4,7 +4,6 @@ body {
   padding: 0;
 }
 
-/* Fullscreen Background */
 .background {
   position: fixed;
   top: 0;
@@ -13,8 +12,8 @@ body {
   height: 100vh;
 
   background-image: url("Images/BackGround.jpg"); 
-  background-size: cover;        /* Makes it fill screen */
-  background-position: center;   /* Keeps center aligned */
+  background-size: cover;        
+  background-position: center;   
   background-repeat: no-repeat;
 
   z-index: -1; 
@@ -52,11 +51,11 @@ body.dark .background {
 }
 
 body.dark .circle {
-  transform: translateX(20px);   /* adjust according to width */
+  transform: translateX(20px);  
 }
 .circle span {
-  font-size: 14px;   /* adjust if needed */
-  line-height: 1;    /* removes extra vertical spacing */
+  font-size: 14px;   
+  line-height: 1;    
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +108,7 @@ body.dark .circle {
   font-size: 14px;
 }
 .login-card button {
-  margin-top: 15px;   /* moves button down */
+  margin-top: 15px;   
   padding: 8px 20px;
   border-radius: 18px;
   border: none;
@@ -170,7 +169,7 @@ body.dark .login-card input::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 body.dark .login-card button {
-  margin-top: 15px;   /* moves button down */
+  margin-top: 15px;   
   padding: 8px 20px;
   border-radius: 18px;
   border: none;
@@ -221,13 +220,13 @@ body.dark .Signup a {
   
 }
 
-/* Google Button */
+
 .google-btn {
   background: #ffff;
   color: black !important;
 }
 
-/* Facebook Button */
+
 .facebook-btn {
   background: #1877f2;
   color: white;
